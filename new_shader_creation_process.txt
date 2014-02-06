@@ -1,0 +1,26 @@
+Shader program creation process
+
+1. Getting the shader information in to the program. 
+
+In this program, the task is done by the function, BuildShader, which manupilates the shader 
+creation process through different functions.
+
+2. Reading and getting content in shader files
+
+This is done by sending the specific file name in to a function which reads and returns the content
+in that file. The function may contain typical file handling (opening, reading and closing file through 
+a file pointor) instructions.
+
+3. Then creating the shaders
+
+Another separate function has been used in this program to create the shaders. This function gets the 
+returned content from the ReadShader function. Then creates and compiles the created shader using 
+built in GL functions.
+
+4. Attaching and Linking with the program
+
+First we have to create a program and attache the all shaders which we are going to use. This is done by
+the program "shaderprogram" using two GL functions ( glCreatProgram() and glAttachShader() ). Finally 
+the cretaed program is linked with our main program using GL function, glLinkProgram().
+
+
